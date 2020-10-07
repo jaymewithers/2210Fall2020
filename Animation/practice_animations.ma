@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
 //Name: practice_animations.ma
-//Last modified: Tue, Oct 06, 2020 09:12:15 AM
+//Last modified: Wed, Oct 07, 2020 12:07:27 PM
 //Codeset: 1252
 requires maya "2019";
 requires "stereoCamera" "10.0";
@@ -117,22 +117,22 @@ createNode mesh -n "bouncey_ballShape" -p "bouncey_ball";
 	setAttr ".cdvm[0]"  0 1 1;
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "8DB08D25-4E3B-0009-701C-A9BEC676F046";
+	rename -uid "1BC683E5-494F-DE0B-8D82-959E91AC4C41";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "8CE14E7D-46B9-25D5-F4E1-A8A9B6D0516E";
+	rename -uid "8ABB98BD-4B93-FDC7-641A-0E9A27CE8A1B";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "10E33B0A-4912-31A7-14FD-EB8420FB8144";
+	rename -uid "F0CD7C38-434A-45E5-F1FE-81860BB77510";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "3562B9FE-4A48-A5C2-7F0A-C2A943662DE1";
+	rename -uid "AFB055E3-4273-50C6-32D2-11A37A425AEF";
 	setAttr ".cdl" 1;
 	setAttr -s 3 ".dli[1:2]"  1 2;
 	setAttr -s 3 ".dli";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "10D9D64B-4EF8-2283-BFBC-5BBED98F4A51";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "93633757-4BA6-0B6E-92C7-6496A95D0C90";
+	rename -uid "8E5E427B-4E60-030C-D8F2-85B880F4CE35";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "E3466C5A-4422-A7FB-1338-7AB15994A4D7";
 	setAttr ".g" yes;
@@ -553,8 +553,8 @@ createNode displayLayer -n "bouncing_ball_layer";
 	setAttr ".v" no;
 	setAttr ".do" 2;
 select -ne :time1;
-	setAttr ".o" 1;
-	setAttr ".unw" 1;
+	setAttr ".o" 32;
+	setAttr ".unw" 32;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
